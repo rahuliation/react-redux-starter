@@ -1,5 +1,4 @@
 import baseApi from '@/app/baseApi';
-import { BaseResponse } from '@/types/BaseResponse';
 import { User, UserInput } from '@/types/User';
 
 // Define a service using a base URL and expected endpoints

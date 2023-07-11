@@ -14,7 +14,7 @@ export const authApi = baseApi.injectEndpoints({
   endpoints: (builder) => ({
     //login endpoint
     login: builder.mutation<LoginResponse, LoginInput>({
-      async onQueryStarted(arg, { dispatch, queryFulfilled }) {
+      async onQueryStarted(_, { dispatch, queryFulfilled }) {
         const { data: loginResponse } = await queryFulfilled;
         if (loginResponse) {
           dispatch(setAuthData(loginResponse));

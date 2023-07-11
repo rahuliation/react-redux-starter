@@ -17,7 +17,7 @@ const LoginPage = () => {
 
   const onSubmit: SubmitHandler<LoginInput> = async (values) => {
     try {
-      const abc = await login(values);
+      await login(values);
     } catch (error) {
       console.log(error);
     }

@@ -1,4 +1,4 @@
-import { Params, feathers } from '@feathersjs/feathers';
+import { feathers } from '@feathersjs/feathers';
 import { FetchArgs, FetchBaseQueryError } from '@reduxjs/toolkit/dist/query';
 import { BaseQueryFn } from '@reduxjs/toolkit/dist/query/baseQueryTypes';
 
@@ -18,7 +18,7 @@ client.use('/users', localstorage({ name: 'users', startId: 1 })).hooks({
 });
 // Password is not encrypted intentionally ... as it is building demo purpose
 client.use('/authenticate', {
-  async create(data: any, params: Params) {
+  async create(data: any) {
     const user = _.first(
       await (client.service('users') as any)._find({
         query: {
