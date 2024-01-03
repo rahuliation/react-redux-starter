@@ -4,7 +4,6 @@ import _ from 'lodash';
 
 const UserPage = () => {
   const { data: usersData } = useGetUsersQuery();
-  console.log(usersData);
 
   return (
     <MainLayout>

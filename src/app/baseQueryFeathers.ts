@@ -16,6 +16,8 @@ client.use('/users', localstorage({ name: 'users', startId: 1 })).hooks({
     },
   },
 });
+
+
 // Password is not encrypted intentionally ... as it is building demo purpose
 client.use('/authenticate', {
   async create(data: any) {
@@ -25,7 +27,7 @@ client.use('/authenticate', {
           email: data.email,
         },
       }),
-    ) as any;
+    ) ;
     if (!user) {
       throw new Error('User Not Found');
     }

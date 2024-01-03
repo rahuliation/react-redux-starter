@@ -77,7 +77,7 @@ const TheRoutes = () => {
           }
           path='/registration'
         />
-      </Routes>
+        </Routes>
     </Router>
   );
 };
